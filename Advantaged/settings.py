@@ -60,7 +60,7 @@ ROOT_URLCONF = 'Advantaged.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -125,6 +125,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT= os.path.join(BASE_DIR,'staticfiles/')
-CKEDITOR_BASEPATH = "/staticfiles/ckeditor/ckeditor/"
+# CKEDITOR_BASEPATH = "/staticfiles/ckeditor/ckeditor/"
 CKEDITOR_UPLOAD_PATH = "uploads/"
-CKEDITOR_FILENAME_GENERATOR = 'utils.get_filename'
+# CKEDITOR_FILENAME_GENERATOR = 'utils.get_filename'
+
+CKEDITOR_IMAGE_BACKEND = "pillow"
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

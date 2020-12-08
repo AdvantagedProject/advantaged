@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+</body>
+    <div class="container">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.media }}
+            {{ form.as_p }}
+            <br/>
+            <input class=btn type="submit" value="제출" />
+        </form>
+    </div>
+</html>
