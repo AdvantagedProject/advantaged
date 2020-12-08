@@ -24,3 +24,5 @@ urlpatterns = [
     path('', include('funding.urls')),    
     path('community/', include('community.urls')),
     ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

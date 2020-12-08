@@ -7,6 +7,7 @@ from ckeditor.widgets import CKEditorWidget
 from .models import Funding, Person
 
 class FundAdminForm(forms.ModelForm):
+    #content = forms.CharField(widget=CKEditorUploadingWidget())    
     class Meta:
         model = Funding
         fields = '__all__'
@@ -36,4 +37,3 @@ class UserForm(forms.ModelForm):
         self.fields['password'].widget.attrs.update({'id':'pw'})
         self.fields['last_name'].widget.attrs.update({'id':'name'})
         self.fields['email'].widget.attrs.update({'id':'email'})
-

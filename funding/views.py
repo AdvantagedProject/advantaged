@@ -47,4 +47,4 @@ def funding_create(request):
 
 def funding_detail(request, pk):
     funding = get_object_or_404(funding_models.Funding, pk=pk)
-    return render(request, "funding/funding_detail.html", {'funding': funding}) 
+    return render(request, "funding/funding_detail.html", {'funding': funding})
